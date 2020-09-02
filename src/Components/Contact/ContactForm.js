@@ -109,8 +109,8 @@ export default function ContactForm(props){
 
     async function handleSubmissionClick(e){
         e.preventDefault();
-        dispatch({ type: 'validate' })
-        dispatch({ type: 'submitClick', payload: true })
+        await dispatch({ type: 'validate' })
+        await dispatch({ type: 'submitClick', payload: true })
         let inputStateAsArr = [];
         for(let key in state.formData){
             inputStateAsArr.push(state.formData[key])
@@ -119,7 +119,7 @@ export default function ContactForm(props){
         if(inputStateAsArr.every(input => input.valid)){
             let options = { headers: { 'Content-Type': 'application/json' } }
             try {
-                let resp = await axios.post('/charredapi/contact-submit', state.formData, options);
+                let resp = await axios.post('https://charredfoodserver.herokuapp.com/charredapi/contact-submit', state.formData, options);
                 formCompletedCB(resp.data)
             } catch (error) {   
                 console.log('Error: ' + error)
