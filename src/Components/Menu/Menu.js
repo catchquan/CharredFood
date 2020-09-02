@@ -4,7 +4,7 @@ import menuData from '../../MenuData/MenuData';
 import "./Menu.css";
 import MenuCategory from './MenuCategory';
 import MenuCategoryBtns from './MenuCategoryBtns';
-import headerBackground from '../../imgs/menu-img1.jpg';
+import headerBackground from '../../imgs/menu-img1-min.jpg';
 import PropTypes from 'prop-types';
 import hasLoadingScreen from '../../HOC/hasLoadingScreen';
 
