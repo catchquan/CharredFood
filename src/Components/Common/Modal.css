@@ -1,0 +1,37 @@
+.Modal {
+    position: fixed;
+    width: 105vw;
+    height: 105vh;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #2f2f2fa1;
+    z-index: 99;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0ms, opacity 300ms linear;
+}
+
+.Modal--open {
+    visibility: visible;
+    opacity: 1;
+}
+
+.Modal-closeBtn {
+    position: absolute;
+    top: 2.5%;
+    right: 3%;
+    color: var(--secondary-color);
+    margin: .5rem;
+    cursor: pointer;
+    z-index: 20;
+    transition: opacity 350ms ease;
+}
+
+.Modal-closeBtn:hover {
+    opacity: .65;
+}
+
+.Modal-closeBtn i {
+    font-size: 1.25rem;
+}

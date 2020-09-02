@@ -1,0 +1,18 @@
+/* MOUNT ANIMATION */
+.fadeIn {
+    opacity: 0;
+    transition: opacity 1000ms ease-in, transform 500ms ease;
+}
+
+.fadeIn--mounted {
+    opacity: 1;
+}
+
+.slideUp {
+    transform: translateY(30%);
+    transition: 500ms ease-in;
+}
+
+.slideUp--mounted {
+    transform: translateY(0);
+}

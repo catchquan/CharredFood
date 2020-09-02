@@ -1,0 +1,7 @@
+.Charred {
+    background-color: var(--main-color);
+    display: flex;
+    flex-direction: column;
+    overflow-anchor: none;
+    /* height: 100vh; */
+}

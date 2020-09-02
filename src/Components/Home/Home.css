@@ -1,0 +1,162 @@
+.Home {
+    color: var(--secondary-color);
+    text-align: center;
+    overflow: hidden;
+}
+
+.Home main {
+    position: relative;
+    z-index: 1;
+}
+
+.Home-parallax {
+    position: relative;
+    width: 100%;
+    z-index: 0;
+    background-image: url(../../imgs/mobile-background-faded-high-top.png);
+    background-position: center;
+    background-size: cover; 
+    /* UNCOMMENT THIS FOR PARALLAX BEHAVIOR IN MOBILE */
+    /* background-attachment: fixed; */
+    height: 75vh;
+    animation: mountAni 750ms ease-in-out;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+
+@keyframes mountAni {
+    0% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@media screen and (min-width: 1025px){
+    .Home-parallax {
+        background-image: url(../../imgs/background-faded.jpg);
+        background-attachment: fixed;
+    }
+}
+
+.Home-brand {
+    display: none;
+}
+
+@media screen and (min-width: 1025px) {
+    .Home-brand {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: -1;
+        font-size: 25vw;
+        color: var(--main-color);
+        letter-spacing: -16px;
+        display: block;
+        transition: 750ms ease;
+        animation: mountAni2 750ms ease-in-out 500ms;
+        animation-fill-mode: forwards;
+        opacity: 0;
+    }
+    
+    @keyframes mountAni2 {
+        0% {
+            transform: translate(-50%, -50%) scale(1.3);
+        }
+        100% {
+            transform: translate(-50%, -50%) scale(1);
+            opacity: .3;
+        }
+    }
+}
+
+.Home-logo {
+    opacity: 0;
+    max-width: 80%;
+    max-height: calc(100% - 2rem);
+    filter: drop-shadow(7.5px 7.5px 1px #2f2f2f);
+    position: absolute;
+    z-index: -1;
+    top: calc(50% + 1rem);
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: opacity 1500ms ease-in-out;
+}
+
+.Home-logo--loaded {
+    opacity: .65;
+}
+
+@media screen and (min-width: 1025px){
+    .Home-logo {
+        width: auto;
+        position: fixed;
+    }
+
+    .Home-logo--loaded {
+        opacity: .75;
+    }
+}
+
+.Home-latest {
+    margin: 3rem auto;
+    margin-bottom: 1.5rem;
+    padding: 0 1rem;
+    font-family: 'Francois One', sans-serif;
+    text-align: left;
+    max-width: 1000px;
+    opacity: 0;
+    /* transform: scale(2); */
+    animation: mount 1s ease-in forwards 1 350ms;
+}
+
+@keyframes mount {
+    0% {
+        opacity: 0;
+        transform: scale(2);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.Home-header {
+    text-transform: uppercase;
+    font-weight: 500;
+    position: relative;
+    display: inline-block;
+    margin-right: auto;
+}
+
+.Home-header::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background-color: var(--secondary-color)
+}
+
+.Home-message {
+    margin-top: 1.5rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: .9rem;
+    text-transform: uppercase;
+    line-height: 1.5rem;
+    position: relative;
+}
+
+.Home-message:not(:first-of-type)::before {
+    content: "";
+    display: block;
+    height: 2px;
+    width: 100px;
+    background-color: var(--secondary-color);
+    margin-bottom: 1.5rem;
+}

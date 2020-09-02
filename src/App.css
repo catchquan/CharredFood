@@ -1,0 +1,42 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  position: relative;
+  overflow-x: hidden;
+}
+
+@media screen and (min-width: 1025px){
+  body {
+    overflow-y: scroll;
+  }
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+  padding-inline-start: 0;
+}
+
+a {
+  text-decoration: none; 
+  color: var(--main-color);
+}
+
+blockquote {
+  margin-left: 0;
+}
+
+textarea {
+  resize: none;
+}
+
+.hidden {
+  display: none;
+}
+
+.App {
+  position: relative;
+}

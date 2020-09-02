@@ -1,0 +1,140 @@
+.AboutRestaurantSection {
+    display: grid;
+    grid-template-columns: 1fr;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    font-family: 'Montserrat', sans-serif;
+    color: var(--secondary-color);
+    opacity: 0;
+    transition: opacity 1s ease-in;
+}
+
+.AboutRestaurantSection.inView {
+    opacity: 1;
+}
+
+.AboutRestaurantSection.last {
+    padding-bottom: 3.5rem;
+}
+
+@media screen and (min-width: 650px){
+    .AboutRestaurantSection {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.AboutRestaurantSection-imgContainer {
+    overflow: hidden;
+    position: relative;
+}
+
+@media screen and (min-width: 650px){
+    .AboutRestaurantSection {
+        grid-gap: 2rem;
+    }
+    
+    .AboutRestaurantSection-imgContainer.reverse {
+        order: -1;
+    }
+}
+
+.AboutRestaurantSection-imgContainer::before {
+    content: "";
+    padding-top: 100%;
+    width: 100%;
+    display: block;
+}
+
+.AboutRestaurantSection-imgContainer img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.AboutRestaurantSection-imgContainer img.portrait {
+    width: 100%;
+    height: inherit;
+}
+
+.AboutRestaurantSection-imgContainer img.landscape {
+    width: inherit;
+    height: 100%;
+}
+
+.AboutRestaurantSection-info {
+    text-align: center;
+    margin-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: transform 1.5s ease;
+}
+
+.AboutRestaurantSection-info.inView {
+    opacity: 1;
+    transform: translateY(0%);
+}
+
+@media screen and (min-width: 650px){
+    .AboutRestaurantSection-info {
+        transform: translateY(20%);
+    }
+
+    .AboutRestaurantSection-info.inView {
+        transform: translateY(0%);
+    }
+}
+
+.AboutRestaurantSection-header {
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 1.75rem;
+    letter-spacing: 2px;
+    text-decoration: underline;
+    margin-bottom: 2rem;
+}
+
+.AboutRestaurantSection-info p {
+    text-transform: uppercase;
+}
+
+.AboutRestaurantSection-text {
+    font-size: .8rem;
+    margin-bottom: 1rem;
+}
+
+.AboutRestaurantSection-highlightText {
+    opacity: .5;
+}
+
+.AboutRestaurantSection hr {
+    color: var(--secondary-color-fade-more);
+    margin-bottom: 2rem;
+}
+
+.AboutRestaurantSection.last hr {
+    display: none;
+}
+
+.AboutRestaurantSection hr:first-of-type {
+    color: transparent;
+}
+
+@media screen and (min-width: 650px){
+    .AboutRestaurantSection hr:first-of-type {
+        color: var(--secondary-color-fade-more);
+    }
+
+    .AboutRestaurantSection hr:nth-of-type(2),
+    .AboutRestaurantSection.reverse hr:first-of-type  {
+        color: transparent;
+    }
+    
+    .AboutRestaurantSection.reverse hr:nth-of-type(2) {
+        color: var(--secondary-color-fade-more);
+    }
+}
