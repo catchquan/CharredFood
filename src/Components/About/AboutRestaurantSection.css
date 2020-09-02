@@ -113,6 +113,8 @@
 
 .AboutRestaurantSection hr {
     color: var(--secondary-color-fade-more);
+    border-color: var(--secondary-color-fade-more);
+    background-color: var(--secondary-color-fade-more);
     margin-bottom: 2rem;
 }
 
@@ -122,19 +124,27 @@
 
 .AboutRestaurantSection hr:first-of-type {
     color: transparent;
+    border-color: transparent;
+    background-color: transparent;
 }
 
 @media screen and (min-width: 650px){
     .AboutRestaurantSection hr:first-of-type {
         color: var(--secondary-color-fade-more);
+        border-color: var(--secondary-color-fade-more);
+        background-color: var(--secondary-color-fade-more);
     }
 
     .AboutRestaurantSection hr:nth-of-type(2),
     .AboutRestaurantSection.reverse hr:first-of-type  {
         color: transparent;
+        border-color: transparent;
+        background-color: transparent;
     }
     
     .AboutRestaurantSection.reverse hr:nth-of-type(2) {
         color: var(--secondary-color-fade-more);
+        border-color: var(--secondary-color-fade-more);
+        background-color: var(--secondary-color-fade-more);
     }
 }
