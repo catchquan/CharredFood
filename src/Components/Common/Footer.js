@@ -48,7 +48,7 @@ export default function Footer(props){
                 </a>
             </div>
             <div className="Footer-message">
-                <p>Our sites are designed according to web accessibility standards, and we are in the process of making additional modifications to ensure a better user experience. If you have any questions, please contact us at <span>charredfood.contact@gmail.com</span></p>
+                <p>Our site is designed according to web accessibility standards, and we are in the process of making additional modifications to ensure a better user experience. If you have any questions, please contact us at <span>charredfood.contact@gmail.com</span></p>
             </div>
             <div className={`Footer-callBtn ${atTop ? '' : 'Footer-callBtn--unhide'}`}>
                 <a href="tel:703-435-8300">
