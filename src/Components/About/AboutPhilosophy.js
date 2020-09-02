@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import './AboutPhilosophy.css';
 import AboutPhilosophyCard from './AboutPhilosophyCard';
-import locally_sourced from '../../imgs/locally-sourced1.jpg';
-import high_quality from '../../imgs/high-quality.jpg';
-import community from '../../imgs/community.jpg';
+import locally_sourced from '../../imgs/locally-sourced1-min.jpg';
+import high_quality from '../../imgs/high-quality-min.jpg';
+import community from '../../imgs/community-min.jpg';
 import uuid from 'uuid/v4';
 
 export default function AboutPhilosophy(){

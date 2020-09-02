@@ -69,7 +69,7 @@
     }
     
     .Order-btn:hover .Order-btnAni::after {
-        transform: translateX(-52.k5%) scaleX(1);
+        transform: translateX(-52.5%) scaleX(1);
     }
 }
 
