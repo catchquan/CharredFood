@@ -1,28 +1,20 @@
-import React, { useEffect, useRef, useState } from 'react';
-import restaurantStockImg from '../../imgs/restaurant_stock/restaurant-stock4.jpg';
-import restaurantStockImg2 from '../../imgs/restaurant_stock/restaurant-stock5.jpg';
-import restaurantStockImg3 from '../../imgs/restaurant_stock/restaurant-stock3.jpg';
-import restaurantStockImg4 from '../../imgs/restaurant_stock/restaurant-stock2.jpg';
+import React, { useEffect, useRef } from 'react';
 import AboutImgGalleryImg from './AboutImgGalleryImg';
 import dragScroll from '../../Utilities/dragScroll';
 import { useLocation } from 'react-router-dom';
-// import { useInView } from 'react-intersection-observer';
-import uuid from 'react-uuid';
-import './AboutImgGallery.css'
+import './AboutImgGallery.css';
+
+function importAll(r){
+    return r.keys().map(r);
+}
+
+const images = importAll(require.context('../../imgs/restaurant_stock', false, /\.(png|jpe?g)?/))
+
+console.log(images)
 
 export default function AboutImgGallery(){
-    let [imgGallery] = useState([
-        { img: restaurantStockImg, key: uuid() }, 
-        { img: restaurantStockImg2, key: uuid() }, 
-        { img: restaurantStockImg3, key: uuid() }, 
-        { img: restaurantStockImg4, key: uuid() }, 
-        { img: restaurantStockImg4, key: uuid() }, 
-        { img: restaurantStockImg2, key: uuid() }, 
-        { img: restaurantStockImg, key: uuid() }
-    ]);
-
-    let imgGalleryRender = imgGallery.map((img, idx) => (
-        <AboutImgGalleryImg key={img.key} img={img.img} idx={idx} />
+    const imgGalleryRender = images.map((img, idx) => (
+        <AboutImgGalleryImg key={img} img={img} idx={idx} />
     ))
 
     const galleryRef = useRef()
