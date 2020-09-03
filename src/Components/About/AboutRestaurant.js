@@ -2,9 +2,9 @@ import React from 'react';
 import './AboutRestaurant.css';
 import AboutRestaurantSection from './AboutRestaurantSection';
 import AboutImgGallery from './AboutImgGallery';
-import restaurantStockImg from '../../imgs/restaurant-stock3.jpg';
-import burgerStock from '../../imgs/burger-stock.jpg';
-import worldgateImg from '../../imgs/worldgatecentre.png';
+import restaurantStockImg from '../../imgs/restaurant_stock/restaurant-stock3.jpg';
+import burgerStock from '../../imgs/other_imgs/burger-stock-min.jpg';
+import worldgateImg from '../../imgs/other_imgs/worldgatecentre-min.jpg';
 
 const section_data = [
     {

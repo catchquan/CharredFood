@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { useInView } from 'react-intersection-observer';
 import { usePrevious } from '../../custom_hooks/usePrevious';
-import background from '../../imgs/about-background-min.jpg';
+import background from '../../imgs/backgrounds/about-background-min.jpg';
 import './About.css';
 import AboutNav from './AboutNav';
 import AboutRestaurant from './AboutRestaurant';

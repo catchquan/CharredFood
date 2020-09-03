@@ -1,8 +1,8 @@
 import React, { useEffect, useRef, useState } from 'react';
-import restaurantStockImg from '../../imgs/restaurant-stock4.jpg';
-import restaurantStockImg2 from '../../imgs/restaurant-stock5.jpg';
-import restaurantStockImg3 from '../../imgs/restaurant-stock3.jpg';
-import restaurantStockImg4 from '../../imgs/restaurant-stock2.jpg';
+import restaurantStockImg from '../../imgs/restaurant_stock/restaurant-stock4.jpg';
+import restaurantStockImg2 from '../../imgs/restaurant_stock/restaurant-stock5.jpg';
+import restaurantStockImg3 from '../../imgs/restaurant_stock/restaurant-stock3.jpg';
+import restaurantStockImg4 from '../../imgs/restaurant_stock/restaurant-stock2.jpg';
 import AboutImgGalleryImg from './AboutImgGalleryImg';
 import dragScroll from '../../Utilities/dragScroll';
 import { useLocation } from 'react-router-dom';

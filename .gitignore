@@ -21,3 +21,6 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+# unused stock imgs
+/src/imgs/stockimgs_ignore

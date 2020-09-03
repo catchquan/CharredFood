@@ -1,6 +1,6 @@
 import React from 'react';
 import './LoadingScreen.css';
-import whiteLogo from '../../imgs/logo-white.png';
+import whiteLogo from '../../imgs/logos/logo-white.png';
 import PropTypes from 'prop-types';
 
 LoadingScreen.propTypes = {

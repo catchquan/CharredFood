@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './FullNav.css';
-import whiteLogo from '../../imgs/logo-white.png';
+import whiteLogo from '../../imgs/logos/logo-white.png';
 import PropTypes from 'prop-types';
 
 FullNav.propTypes = {

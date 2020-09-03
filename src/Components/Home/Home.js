@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import './Home.css';
-import Logo from '../../imgs/logo-full-black.png'
+import Logo from '../../imgs/logos/logo-full-black.png'
 import PropTypes from 'prop-types';
 import { useIsMounting } from '../../custom_hooks/useIsMounting';
 

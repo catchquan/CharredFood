@@ -19,7 +19,7 @@
     position: relative;
     width: 100%;
     z-index: 0;
-    background-image: url(../../imgs/mobile-background-faded-high-top.png);
+    background-image: url(../../imgs/backgrounds/mobile-background-faded-min.jpg);
     background-position: center;
     background-size: cover; 
     /* UNCOMMENT THIS FOR PARALLAX BEHAVIOR IN MOBILE */
@@ -30,7 +30,7 @@
 
 @media screen and (min-width: 1025px){
     .Home-parallax {
-        background-image: url(../../imgs/background-faded.jpg);
+        background-image: url(../../imgs/backgrounds/background-faded-min.jpg);
         background-attachment: fixed;
     }
 }

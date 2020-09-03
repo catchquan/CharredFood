@@ -3,15 +3,15 @@ import { useInView } from 'react-intersection-observer';
 import { MainStateContext } from '../../Charred';
 import './AboutTeam.css';
 import AboutTeamPersonnelCard from './AboutTeamPersonnelCard';
-import brandonImg from '../../imgs/brandon_portrait.jpg'
-import placeholderImg from '../../imgs/placeholder_portrait.jpg'
+import brandonImg from '../../imgs/team/brandon_portrait.jpg'
+import placeholderImg from '../../imgs/team/placeholder_portrait-min.jpg'
 import ResponsiveGallery from '../Common/ResponsiveGallery';
 
 function importAll(r) {
     return r.keys().map(r);
 }
 
-const images = importAll(require.context('../../imgs/team', false, /\.(png|jpe?g)$/));
+const images = importAll(require.context('../../imgs/team/gallery', false, /\.(png|jpe?g)$/));
 
 export default function AboutTeam(){
     const mainState = useContext(MainStateContext)
