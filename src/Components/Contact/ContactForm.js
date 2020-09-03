@@ -120,6 +120,7 @@ export default function ContactForm(props){
             let options = { headers: { 'Content-Type': 'application/json' } }
             try {
                 let resp = await axios.post('https://charredfoodserver.herokuapp.com/charredapi/contact-submit', state.formData, options);
+                // let resp = await axios.post('/charredapi/contact-submit', state.formData, options);
                 formCompletedCB(resp.data)
             } catch (error) {   
                 console.log('Error: ' + error)
