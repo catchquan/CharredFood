@@ -7,7 +7,7 @@ import brandonImg from '../../imgs/team/brandon_portrait.jpg'
 import placeholderImg from '../../imgs/team/placeholder_portrait-min.jpg'
 import ResponsiveGallery from '../Common/ResponsiveGallery';
 
-function importAll(r) {
+function importAll(r){
     return r.keys().map(r);
 }
 
