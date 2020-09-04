@@ -43,7 +43,7 @@ function Modal(props){
         // eslint-disable-next-line
     }, [location])
 
-    let modalOnOff = open ? 'Modal--open' : null;
+    const modalOnOff = open ? 'Modal--open' : null;
     return (
         <div className={`${modalOnOff} Modal`}>
             { content }

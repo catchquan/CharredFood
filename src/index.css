@@ -24,6 +24,7 @@ code {
   --secondary-color-fade: #f7f4f477;
   --secondary-color-fade-more: #f7f4f41e;
   --highlight-color: #B61E38;
+  --highlight-color-fade-less: #b61e37ab;
   --highlight-color-fade: #b61e377c;
   --highlight-color-fade-more: #b61e373b;
   --galBlock-size: 25rem;

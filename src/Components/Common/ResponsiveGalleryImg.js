@@ -35,7 +35,7 @@ export default function ResponsiveGalleryImg(props) {
     }
 
     return (
-        <div onClick={isMobile ? toggleModal.bind(null, itemModal, true) : null} style={{ position: 'relative', overflow: 'hidden' }}>
+        <div onClick={toggleModal.bind(null, itemModal, true)} style={{ position: 'relative', overflow: 'hidden' }}>
             <img
                 ref={ imgRef } 
                 className={`ResponsiveGalleryImg ${inViewClass}`} 

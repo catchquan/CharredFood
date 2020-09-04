@@ -23,9 +23,17 @@
     right: 3%;
     color: var(--secondary-color);
     margin: .5rem;
+    border-radius: 100px;
     cursor: pointer;
     z-index: 20;
     transition: opacity 350ms ease;
+    border-radius: 100px;
+    background-color: var(--highlight-color-fade-less);
+    width: 1.75rem;
+    height: 1.75rem;
+    line-height: 1.75rem;
+    text-align: center;
+    box-shadow: 2px 2px 5px var(--main-color-darker);
 }
 
 .Modal-closeBtn:hover {
