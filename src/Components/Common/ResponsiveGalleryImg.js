@@ -34,8 +34,14 @@ export default function ResponsiveGalleryImg(props) {
         document.execCommand('copy')
     }
 
+    function handleImgClick(e){
+        if(!e.target.dataset.preventOpen){
+            toggleModal(itemModal, true)
+        }
+    }
+
     return (
-        <div onClick={toggleModal.bind(null, itemModal, true)} style={{ position: 'relative', overflow: 'hidden' }}>
+        <div onClick={ handleImgClick } style={{ position: 'relative', overflow: 'hidden' }}>
             <img
                 ref={ imgRef } 
                 className={`ResponsiveGalleryImg ${inViewClass}`} 
@@ -47,7 +53,8 @@ export default function ResponsiveGalleryImg(props) {
                     style={ isMobile ? { display: 'none' } : null }
                     ref={ shareBtnRef } 
                     onClick={ handleShareClick } 
-                    className={`ResponsiveGalleryImg-shareBtn ${shareClicked ? 'clicked' : null} fas fa-share-square`}>
+                    className={`ResponsiveGalleryImg-shareBtn ${shareClicked ? 'clicked' : null} fas fa-share-square`}
+                    data-prevent-open={ true }>
                     <div className={`ResponsiveGalleryImg-shareBtnMsg ${shareClicked ? 'clicked' : null}`}>Link Copied!</div>
                 </i>
                 <i onClick={ toggleModal.bind(null, itemModal, true) } className="fas fa-expand"></i>
