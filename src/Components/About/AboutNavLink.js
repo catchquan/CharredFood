@@ -35,7 +35,7 @@ function AboutNavLink(props){
     return (
         <li onClick={ handleClick } className={`${setClasses()} ${activeStyles} AboutNavLink`}>
             <p>{ linktext }</p>
-            {isActive ? <i className={`AboutNavLink-arrow fas fa-chevron-down`} /> : null}
+            {isActive && isMobile ? <i className={`AboutNavLink-arrow fas fa-chevron-down`} /> : null}
         </li>
             
     )
