@@ -6,6 +6,7 @@ import Menu from './components/Menu/Menu';
 import About from './components/About/About';
 import Contact from './components/Contact/Contact';
 import Order from './components/Order/Order';
+import Admin from './components/Admin/Admin';
 import Modal from './components/Common/Modal';
 import Footer from './components/Common/Footer';
 import './Charred.css';
@@ -42,9 +43,7 @@ let initState = {
 export const ToggleModalContext = React.createContext();
 export const MainStateContext = React.createContext();
 
-let numRenders = 0;
 export default function Charred() {
-	console.log(`Main body has rendered ${numRenders} times.`);
 	const [state, dispatch] = useReducer(bodyReducer, initState);
 	const { atTop, isMobile, componentMounted, isModalOpen } = state;
 
@@ -106,7 +105,6 @@ export default function Charred() {
 		isModalOpen.open ? (document.body.style.overflow = 'hidden') : (document.body.style = '');
 	}, [isModalOpen.open]);
 
-	numRenders = numRenders + 1;
 	return (
 		<div className='Charred'>
 			<MainStateContext.Provider value={state}>
@@ -149,8 +147,9 @@ export default function Charred() {
 						path='/order'
 						render={() => <Order atTop={atTop} isMobile={isMobile} />}
 					/>
+					<Route exact path='/admin' render={() => <Admin />} />
 					<Modal toggleModal={toggleModal} modalInfo={isModalOpen} />
-					<Route path='/' render={() => <Footer atTop={atTop} isMobile={isMobile} />} />
+					<Footer atTop={atTop} isMobile={isMobile} />
 				</ToggleModalContext.Provider>
 			</MainStateContext.Provider>
 		</div>

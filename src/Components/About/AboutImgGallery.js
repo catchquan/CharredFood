@@ -10,8 +10,6 @@ function importAll(r) {
 
 const images = importAll(require.context('../../imgs/restaurant_stock', false, /\.(png|jpe?g)?/));
 
-console.log(images);
-
 export default function AboutImgGallery() {
 	const imgGalleryRender = images.map((img, idx) => (
 		<AboutImgGalleryImg key={img} img={img} idx={idx} />
