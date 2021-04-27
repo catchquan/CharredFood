@@ -1,0 +1,303 @@
+.ContactForm {
+    width: 100%;
+    max-width: 550px;
+    padding: 0rem 1.5rem 0rem 1.5rem;
+}
+
+@media screen and (min-width: 1025px){
+    .ContactForm {
+        padding: 0 4rem 0rem 3rem;
+    }
+}
+
+.ContactForm input,
+.ContactForm textarea {
+    font-family: 'Montserrat', sans-serif;
+    border: none;
+    border-bottom: 1px solid var(--main-color-fade);
+    border-left: 3px solid var(--main-color-fade);
+    box-shadow: 0px 3px 5px var(--main-color-fade-more);
+}
+
+@media screen and (min-width: 1025px){
+    .ContactForm {
+        max-width: 1000px;
+    }
+}
+
+.ContactForm-iconContainer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 2rem 0;
+}
+
+.ContactForm-icon {
+    font-size: 2rem;
+    padding: 1rem;
+    color: var(--secondary-color);
+    background-color: var(--main-color);
+    border-radius: 40px;
+    display: inline-block;
+    box-shadow: 2px 1px 5px var(--main-color-fade);
+}
+
+.ContactForm-inputWrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.ContactForm-inputWrapper--2col {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+
+.ContactForm-inputWrapper--2col .ContactForm-inputWrapper {
+    flex-basis: 100%;
+}
+
+@media screen and (min-width: 500px){
+    .ContactForm-inputWrapper--2col {
+        flex-wrap: nowrap;
+    }
+
+    .ContactForm-inputWrapper--2col .ContactForm-inputWrapper {
+        flex-basis: 50%;
+    }
+    
+    .ContactForm-inputWrapper--2col .ContactForm-inputWrapper:last-of-type {
+        margin-left: 1rem;
+    }
+}
+
+.ContactForm-inputWrapper label {
+    font-size: .75rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-bottom: .5rem;
+}
+
+.ContactForm-input--invalid {
+    border-left: 3px solid var(--highlight-color-fade) !important;
+    border-bottom: 1px solid var(--highlight-color-fade) !important;
+    background-color: var(--highlight-color-fade-more) !important;
+}
+
+.ContactForm-inputWrapper input[type=text] {
+    text-transform: capitalize;
+}
+
+.ContactForm-inputWrapper input[type=text],
+.ContactForm-inputWrapper input[type=email] {
+    background-color: var(--secondary-color2);
+    padding: .5rem;
+    margin-bottom: 1rem;
+    font-weight: 400;
+    transition: 300ms ease;
+}
+
+@media screen and (min-width: 1025px){
+    .ContactForm-inputWrapper input[type=text],
+    .ContactForm-inputWrapper input[type=email] {
+        padding: .5rem;
+        font-size: 1rem;
+        font-weight: 400;
+    }
+}
+
+.ContactForm-inputWrapper input[type=text]:focus,
+.ContactForm-inputWrapper input[type=email]:focus,
+.ContactForm textarea:focus {
+    border-bottom: 1px solid var(--main-color);
+    border-left: 3px solid var(--main-color);
+    outline: none;
+}
+
+.ContactForm-inputWrapper--customSelect {
+    position: relative;
+    z-index: 10;
+}
+
+.ContactForm textarea {
+    width: 100%;
+    font-family: 'Montserrat', sans-serif;
+    padding: .5rem;
+    font-size: .95rem;
+    background-color: var(--secondary-color2);
+    transition: 300ms ease;
+}
+
+.ContactForm-inputWrapper--checkbox {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.ContactForm-inputWrapper--checkbox label {
+    cursor: pointer;
+    margin: 0;
+    margin-left: .5rem;
+    font-weight: 500;
+}
+
+.ContactForm-inputWrapper--checkbox input {
+    cursor: pointer;
+}
+
+.ContactForm-submit {
+    position: relative;
+    display: block;
+    margin: 2rem auto;
+    padding: 1rem 2rem;
+    color: var(--secondary-color);
+    background-color: var(--highlight-color);
+    border: none;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 1rem;
+    cursor: pointer;
+    position: relative;
+    box-shadow: 3px 2px 5px var(--main-color-fade);
+    overflow: hidden;
+    transition: 350ms ease;
+}
+
+.ContactForm-submit:hover {
+    background-color: #006900;
+}
+
+.ContactForm-submit p {
+    transition: 350ms ease;
+}
+
+.ContactForm-submit:hover p {
+    opacity: 0;
+}
+
+.ContactForm-submitIcon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2rem;
+    opacity: 0;
+    transition: 350ms ease;
+}
+
+.ContactForm-submit:hover .ContactForm-submitIcon {
+    opacity: 1;
+    animation: easeOutBounce 1000ms linear;
+    animation-fill-mode: forwards;
+}
+
+@keyframes easeOutBounce {
+    0% {
+        transform: translate(-350%, -50%)
+    }
+
+	5% {
+        transform: translate(-150%, -50%);
+	}
+
+	12% {
+        transform: translate(-139.11%, -50%);
+	}
+
+	24% {
+		transform: translate(-106.44%, -50%);
+	}
+
+	36% {
+		transform: translate(-51.99%, -50%);
+	}
+
+	54% {
+		transform: translate(-74.98%, -50%);
+	}
+
+	74% {
+		transform: translate(-51.63%, -50%);
+	}
+
+	82% {
+		transform: translate(-56.25%, -50%);
+	}
+
+	92% {
+		transform: translate(-50.66%, -50%);
+	}
+
+	96% {
+		transform: translate(-51.54%, -50%);
+	}
+
+	100% {
+		transform: translate(-50%, -50%);
+	}
+
+}
+
+/* Contact Form Input Animations */
+.ContactForm {
+    --base-delay: 200ms;
+}
+
+.ContactForm > *:not(:nth-of-type(2)) { /* inputs are grandchildren in second wrapper */
+    opacity: 0;
+    animation: inputMount 1000ms ease;
+    animation-fill-mode: forwards;
+}
+
+.ContactForm > *:nth-of-type(2) > *:nth-of-type(1) {
+    opacity: 0;
+    animation: inputMount 1000ms ease 100ms;
+    animation-fill-mode: forwards;
+}
+
+.ContactForm > *:nth-of-type(2) > *:nth-of-type(2) {
+    opacity: 0;
+    animation: inputMount 1000ms ease 200ms;
+    animation-fill-mode: forwards;
+}
+
+.ContactForm > *:nth-of-type(3){
+    animation-delay: calc(var(--base-delay) + 250ms);
+}
+
+.ContactForm > *:nth-of-type(4){
+    animation-delay: calc(var(--base-delay) + 300ms);
+}
+
+.ContactForm > *:nth-of-type(5){
+    animation-delay: calc(var(--base-delay) + 400ms);
+}
+
+.ContactForm > *:nth-of-type(6){
+    animation-delay: calc(var(--base-delay) + 500ms);
+}
+
+/* CURRENTLY CHECKBOX ELEMENT */
+.ContactForm > *:nth-of-type(7){
+    animation-delay: calc(var(--base-delay) + 1000ms);
+}
+
+.ContactForm > button {
+    animation-delay: calc(var(--base-delay) + 900ms) !important;
+}
+
+@keyframes inputMount {
+    0% {
+        transform: translateY(40%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}

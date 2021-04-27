@@ -1,0 +1,19 @@
+.AboutPhilosophy {
+    background-color: var(--main-color);
+    padding-top: 5rem;
+    padding-bottom: 3rem;
+}
+
+.AboutPhilosophyCards {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@media screen and (min-width: 1025px){
+    .AboutPhilosophyCards {
+        /* padding: 0 5rem; */
+        display: grid;
+        grid-template-columns: repeat(1, 3fr 2fr 3fr);
+    }
+}

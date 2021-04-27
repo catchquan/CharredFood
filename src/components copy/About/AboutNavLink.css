@@ -1,0 +1,111 @@
+.AboutNavLink {
+    position: absolute;
+    overflow: hidden;
+    z-index: 1;
+    color: rgba(47, 47, 47, .75);
+    font-family: 'Montserrat', sans-serif;
+    font-size: .75rem;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    cursor: pointer;
+    width: 100%;
+    padding: 1rem 0rem 1rem 1rem;
+    background-color: var(--secondary-color);
+    display: flex;
+    justify-content: space-between;
+    transition: transform 300ms linear, opacity 100ms linear;
+    -webkit-tap-highlight-color: transparent;
+}
+
+@media screen and (min-width: 1025px){
+    .AboutNavLink {
+        cursor: pointer;
+        position: relative;
+        opacity: 1;
+        display: flex;
+        justify-content: center;
+        padding: 1rem;
+    }
+
+    .AboutNavLink::after {        
+        position: absolute;
+        content: "";
+        height: 3px;
+        bottom: 0%;
+        left: 50%;
+        width: 115%;
+        transform: translateX(-50%);
+        transition: background-color 1000ms ease;
+    }
+
+    .AboutNavLink.active,
+    .AboutNavLink:hover {
+        color: var(--highlight-color);
+    }
+
+    .AboutNavLink:hover::after,
+    .AboutNavLink.active::after {
+        
+        background-color: var(--highlight-color);
+    }
+}
+
+.AboutNavLink--hide {
+    z-index: -1 !important;
+}
+
+@media screen and (min-width: 1025px){
+    .AboutNavLink--hide {
+        z-index: 0 !important;
+    }
+}
+
+.AboutNavLink--hide p {
+    opacity: 0;
+    transition: 300ms linear;
+}
+
+@media screen and (min-width: 1025px){
+    .AboutNavLink--hide {
+        z-index: 0;
+    }
+
+    .AboutNavLink--hide p {
+        opacity: 1;
+    }
+}
+
+.AboutNavLink:nth-of-type(2).AboutNavLink--navIsOpen {
+    transform: translateY(100%);
+}
+
+.AboutNavLink:nth-of-type(3).AboutNavLink--navIsOpen {
+    transform: translateY(200%);
+}
+
+@media screen and (min-width: 1025px){
+    .AboutNavLink:nth-of-type(2).AboutNavLink--navIsOpen {
+        transform: translateY(0%);
+    }
+    
+    .AboutNavLink:nth-of-type(3).AboutNavLink--navIsOpen {
+        transform: translateY(0%);
+    }
+    
+}
+
+.AboutNavLink-arrow {
+    color: var(--main-color);
+    padding-right: 1rem;
+    transition: 300ms linear;
+}
+
+@media screen and (min-width: 1025px){
+    .AboutNavLink-arrow {
+        display: none;
+    }
+}
+
+.AboutNavLink--navIsOpen .AboutNavLink-arrow {
+    transform: scaleY(-1);
+}

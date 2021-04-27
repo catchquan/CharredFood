@@ -1,0 +1,29 @@
+.AboutImgGallery {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    scrollbar-width: none;
+    position: relative;
+}
+
+::-webkit-scrollbar { /* Chrome fix for scrollbar-width: none */
+    width: 0px;
+    background: transparent;
+}
+
+@media screen and (min-width: 350px){
+    .AboutImgGallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (min-width: 1025px){
+    .AboutImgGallery {
+        display: flex;
+        overflow: scroll;
+        cursor: grab;
+    }
+
+    .AboutImgGallery > div {
+        min-width: 25%;
+    }
+}
