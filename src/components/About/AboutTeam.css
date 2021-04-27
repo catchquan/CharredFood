@@ -1,0 +1,76 @@
+.AboutTeam {
+    padding: 1rem;
+    padding-top: 4rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.AboutTeam-header {
+    font-family: 'Francois One', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    color: var(--secondary-color);
+    font-size: 1.75rem;
+    font-weight: 600;
+    text-align: center;
+}
+
+@media screen and (min-width: 1025px){
+    .AboutTeam-header {
+        display: flex;
+        justify-content: center;
+    }
+
+    .AboutTeam-header h3:first-of-type {
+        margin-right: 1rem;
+    }
+}
+
+.AboutTeam-staffHeader {
+    display: inline-block;
+    margin: 3rem auto 1.5rem auto;
+    text-transform: uppercase;
+    color: var(--secondary-color);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+    font-weight: 500;
+    position: relative;
+}
+
+.AboutTeam-staffHeader::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -.5rem;
+    height: 1px;
+    background-color: var(--secondary-color);
+}
+
+/* ANIMATIONS */
+@media screen and (min-width: 1025px){
+    .AboutTeam-header.inView > h3 {
+        transition: 500ms cubic-bezier(1,.06,.06,1.3)
+    }
+
+    .AboutTeam-header h3 {
+        opacity: 0;
+    }
+    
+    .AboutTeam-header h3:first-of-type {
+        transform: translateX(-100%);
+    }
+    
+    .AboutTeam-header h3:nth-of-type(2) {
+        transform: translateX(100%);
+    }
+    
+    .AboutTeam-header.inView h3 {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+/* ---------- */
+
+

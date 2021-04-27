@@ -1,0 +1,30 @@
+.ResponsiveGallery {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.ResponsiveGallery-column {
+    padding: 0 2px;
+}
+
+.ResponsiveGallery-column:first-of-type {
+    margin-left: -1rem;
+}
+
+.ResponsiveGallery-column:last-of-type {
+    margin-right: -1rem;
+}
+
+.ResponsiveGallery-column > div > img {
+    margin-top: 4px;
+    vertical-align: middle;
+    width: 100%;
+    opacity: 0;
+    cursor: pointer;
+    transition: opacity 500ms ease, transform 300ms ease;
+}
+
+.ResponsiveGallery-column > div > img.inView {
+    opacity: 1;
+}
+

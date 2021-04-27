@@ -1,0 +1,68 @@
+.MenuItem {
+    font-family: 'Montserrat', sans-serif;
+    padding: .5rem 0rem;
+    transition: 200ms ease-in;
+}
+
+.MenuItem:first-of-type {
+    padding-top: 0rem;
+}
+
+.MenuItem:last-of-type {
+    padding-bottom: 1rem;
+}
+
+.MenuItem:hover {
+    cursor: pointer;
+    padding: 1rem 1rem;
+    box-shadow: 5px 5px 10px #2f2f2fa1;
+}
+
+.MenuItem--new {
+    display: block;
+    color: var(--highlight-color);
+    margin-right: .25rem;
+    transform-origin: center;
+    transform: rotate(-10deg);
+    font-size: .85rem;
+    text-decoration: underline;
+    font-family: 'Permanent Marker';
+}
+
+.MenuItem-itemNameAndPriceFlex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.MenuItem-itemName {
+    display: flex;
+    align-items: center;
+    font-weight: 700;
+    margin-right: .5rem;
+}
+
+.MenuItem-itemDesc {
+    margin-top: .15rem;
+    font-size: .75rem;
+    max-width: 85%;
+}
+
+.MenuItem-itemPrice {
+    font-size: .85rem;
+    color: var(--highlight-color);
+    font-weight: 600;
+}
+
+.MenuItem-itemOptionList {
+    display: flex;
+    margin-top: .25rem;
+}
+
+.MenuItem-itemOption {
+    font-family: 'Montserrat', sans-serif;
+    font-size: .75rem;
+    margin-right: .5rem;
+    font-style: italic;
+    text-transform: capitalize;
+}

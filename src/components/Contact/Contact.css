@@ -1,0 +1,53 @@
+.Contact {
+    width: 100vw;
+    min-height: 75vh;
+    background-color: var(--secondary-color);
+    font-family: 'Montserrat', sans-serif;
+    margin-top: 2rem;
+}
+
+.Contact > * {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.Contact-header {
+    background-color: var(--main-color);
+    padding: 3rem 0;
+    color: var(--secondary-color);
+    text-align: center;
+}
+
+.Contact-header > * {
+    opacity: 0;
+    animation: headerMount 1500ms ease 350ms;
+    animation-fill-mode: forwards;
+}
+
+@keyframes headerMount {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.Contact-header h3 {
+    letter-spacing: 3px;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+@media screen and (min-width: 1025px){
+    .Contact {
+        display: grid;
+        grid-template-columns: 2fr 3fr;
+    }
+}
+
+.Contact-formArea {
+    background-color: var(--secondary-color);
+}
