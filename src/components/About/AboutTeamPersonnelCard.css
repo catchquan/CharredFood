@@ -1,0 +1,291 @@
+.AboutTeamPersonnelCard {
+    margin-top: 3rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+@media screen and (min-width: 1025px){
+    .AboutTeamPersonnelCard {
+        grid-template-columns: 3fr 4fr;
+    }
+
+    .AboutTeamPersonnelCard > *:nth-of-type(1) {
+        margin-right: 2rem;
+    }
+
+    .AboutTeamPersonnelCard > *:nth-of-type(2) {
+        margin-left: 2rem;
+    }
+}
+
+.AboutTeamPersonnelCard-img {
+    justify-self: end;
+    max-width: 300px;
+    border-radius: 200px;
+    overflow: hidden;
+}
+
+.AboutTeamPersonnelCard-img img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.AboutTeamPersonnelCard-info {
+    color: var(--secondary-color);
+    text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 1px;
+    margin-left: .5rem;
+    text-align: center;
+    align-self: center;
+    margin-bottom: 1rem;
+}
+
+@media screen and (min-width: 1025px){
+    .AboutTeamPersonnelCard-info {
+        text-align: left;
+    }
+}
+
+.AboutTeamPersonnelCard-firstname {
+    font-size: .75rem;
+    font-weight: 500;
+}
+
+.AboutTeamPersonnelCard-lastname {
+    font-size: 1.5rem;
+    margin-top: .25rem;
+    font-weight: 500;
+}
+
+@media screen and (min-width: 1025px){
+    .AboutTeamPersonnelCard-lastname,
+    .AboutTeamPersonnelCard-firstname {
+        display: inline-block;
+    }
+
+    .AboutTeamPersonnelCard-firstname {
+        font-size: 1.5rem;
+        margin-right: .25rem;
+    }
+}
+
+.AboutTeamPersonnelCard-title {
+    font-size: .75rem;
+    font-weight: 700;
+}
+
+.AboutTeamPersonnelCard-title::before {
+    content: "";
+    display: block;
+    height: 1px;
+    width: 50%;
+    background-color: var(--secondary-color);
+    margin: .5rem auto;
+}
+
+.AboutTeamPersonnelCard-iconList {
+    margin: .5rem 0;
+    display: flex;
+    justify-content: center;
+}
+
+.AboutTeamPersonnelCard-emailPopup {
+    min-width: 250px;
+    position: absolute;
+    top: -350%;
+    left: 50%;
+    transform: translate(-50%, 0%) scale(0);
+    transform-origin: bottom;
+    transition: 150ms ease-in-out;
+    z-index: 15;
+}
+
+.AboutTeamPersonnelCard-emailPopup.unhide {
+    transform: translate(-50%, 0%) scale(1);
+}
+
+.AboutTeamPersonnelCard-emailPopup::after {
+    content: "";
+    position: absolute;
+    height: 0;
+    width: 0;
+    border-top: 20px solid var(--secondary-color);
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    left: 50%;
+    bottom: 0;
+    z-index: 0;
+    transform: translate(-50%, 50%) scale(1);
+}
+
+.AboutTeamPersonnelCard-emailPopup input {
+    width: 100%;
+    margin: 0;
+    padding: .35rem;
+    font-family: 'Montserrat', sans-serif;
+    position: relative;
+    outline: none;
+    border: none;
+    z-index: 20;
+}
+
+.AboutTeamPersonnelCard-emailPopupMessage {
+    background-color: var(--highlight-color);
+    padding: .35rem;
+    font-size: .65rem;
+    height: 100%;
+}
+
+
+@media screen and (min-width: 1025px){
+    .AboutTeamPersonnelCard-title::before {
+        margin: 1rem 0;
+        width: 100%;
+    }
+
+    .AboutTeamPersonnelCard-iconList {
+        margin: 1.25rem 0;
+        justify-content: flex-start;
+    }
+
+    .AboutTeamPersonnelCard-iconList .AboutTeamPersonnelCard-iconContainer:first-of-type {
+        margin-left: 0;
+    }
+}
+
+.AboutTeamPersonnelCard-iconContainer {
+    color: var(--secondary-color);
+    margin: .25rem .5rem .25rem .25rem;
+    cursor: pointer;
+    position: relative;
+    transition: 350ms ease;
+}
+
+.AboutTeamPersonnelCard-iconContainer:hover i {
+    color: var(--highlight-color);
+    opacity: .75;
+}
+
+.AboutTeamPersonnelCard-iconContainer i {
+    font-size: 1.25rem;
+}
+
+.AboutTeamPersonnelCard-infoSnippet {
+    color: var(--secondary-color);
+    padding: .5rem;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+@media screen and (min-width: 1025px){
+    .AboutTeamPersonnelCard-infoSnippet {
+        padding: 0;
+        text-align: left;
+        width: 75%;
+    }
+}
+
+.AboutTeamPersonnelCard-infoSnippet--mobile {
+   margin: 2rem auto; 
+   position: relative;
+   grid-column: 1/-1;
+}
+
+.AboutTeamPersonnelCard-infoSnippet--mobile::after,
+.AboutTeamPersonnelCard-infoSnippet--mobile::before {
+    content: "";
+    display: block;
+    margin: 0 auto;
+    height: 1px;
+    width: 10%;
+    z-index: 20;
+    background-color: var(--secondary-color);
+}
+
+.AboutTeamPersonnelCard-infoSnippet--mobile::after {
+    margin-top: 1rem;
+}
+
+.AboutTeamPersonnelCard-infoSnippet--mobile::before {
+    margin-bottom: 1rem;
+    /* display: none; */
+}
+
+/* FLIPPED STYLES */
+.AboutTeamPersonnelCard.flipped > *:nth-of-type(1){ /*img*/
+    order: 2;
+    justify-self: flex-start;
+}
+
+.AboutTeamPersonnelCard.flipped > *:nth-of-type(2){ /*info*/
+    order: 1;
+}
+
+.AboutTeamPersonnelCard.flipped > *:nth-of-type(3){ /*mobile snippet */
+    order: 3;
+}
+
+@media screen and (min-width: 1025px){
+    .AboutTeamPersonnelCard.flipped {
+        grid-template-columns: 4fr 3fr;
+    }
+
+    .AboutTeamPersonnelCard.flipped .AboutTeamPersonnelCard-img {
+        margin-left: 2rem;
+    }
+
+    .AboutTeamPersonnelCard.flipped .AboutTeamPersonnelCard-info {
+        margin-right: 2rem;
+        margin-left: 0;
+        text-align: right;
+    }
+
+    .AboutTeamPersonnelCard.flipped .AboutTeamPersonnelCard-title::before {
+        margin-left: auto;
+    }
+
+    .AboutTeamPersonnelCard.flipped .AboutTeamPersonnelCard-iconList {
+        justify-content: flex-end;
+    }
+
+    .AboutTeamPersonnelCard.flipped .AboutTeamPersonnelCard-iconContainer {
+        margin: .25rem;
+    }
+
+    .AboutTeamPersonnelCard.flipped .AboutTeamPersonnelCard-emailPopupMessage {
+        text-align: left;
+    }
+
+    .AboutTeamPersonnelCard.flipped .AboutTeamPersonnelCard-infoSnippet {
+        margin-left: auto;
+        text-align: right;
+    }
+}
+
+/* ANIMATIONS */
+.AboutTeamPersonnelCard {
+    opacity: 0;
+    transition: opacity 500ms ease-in;
+}
+
+.AboutTeamPersonnelCard.inView {
+    opacity: 1;
+}
+
+.AboutTeamPersonnelCard-title::before {
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: 500ms ease;
+    transition-delay: 100ms;
+}
+
+.AboutTeamPersonnelCard.flipped .AboutTeamPersonnelCard-title::before {
+    transform-origin: right;
+}
+
+.AboutTeamPersonnelCard.inView .AboutTeamPersonnelCard-title::before {
+    transform: scaleX(1);
+}
